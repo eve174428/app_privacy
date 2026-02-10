@@ -13,10 +13,20 @@
             --secondary-text: #8E8E93;
         }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
         }
+
         /* --- App Selector Buttons --- */
         .app-selector {
             display: flex;
@@ -81,66 +91,9 @@
             color: var(--secondary-text);
             font-size: 0.85em;
         }
-
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        .container_doc {
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            color: #111;
-        }
-        h2 {
-            font-size: 20px;
-            margin-top: 30px;
-            color: #444;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 8px;
-        }
-        p {
-            margin-bottom: 16px;
-        }
-        ul {
-            margin-bottom: 16px;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .date {
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 30px;
-            display: block;
-        }
-        .divider {
-            border-top: 2px dashed #ddd;
-            margin: 60px 0;
-        }
-        .placeholder {
-            background-color: #fff3cd;
-            font-weight: bold;
-            color: #856404;
-            padding: 0 4px;
-        }
-        /* Mobile adjustments */
-        @media (max-width: 600px) {
-            .container { padding: 20px; }
-            h1 { font-size: 24px; }
-        }
+        
+        /* Placeholder Highlight */
+        .edit-me { background-color: #fff3cd; color: #856404; padding: 2px 4px; border-radius: 4px; }
 
     </style>
 </head>
@@ -149,18 +102,14 @@
 <div class="container">
     
     <div class="app-selector">
-        <button class="app-btn" onclick="showPolicy('shortcuts')" id="btn-shortcuts">shortcut</button>
-        <!-- <button class="app-btn" onclick="showPolicy('anotherapp')" id="btn-anotherapp">Another App</button> -->
+        <button class="app-btn" onclick="showPolicy('shortcuts')" id="btn-shortcuts">Shortcuts</button>
+        <button class="app-btn" onclick="showPolicy('stockrunner')" id="btn-stockrunner">StockRunner</button>
         <!-- <button class="app-btn" onclick="showPolicy('gameapp')" id="btn-gameapp">My Game</button> -->
     </div>
 
-   
     <div id="shortcuts" class="policy-content">
-
-    <div class="container_doc">
-                <section id="english">
-                    <h1>Privacy Policy</h1>
-                    <span class="date">Last Updated: January 1, 2026</span>
+        <h1>Privacy Policy: <span class="edit-me">Shortcuts</span></h1>
+         <span class="date">Last Updated: January 1, 2026</span>
             
                     <p>This Privacy Policy explains how <span class="placeholder">[shortcut]</span> ("we", "us", or "our") handles your information. We respect your privacy and are committed to protecting it. <strong>We do not collect, store, or share any of your personal information.</strong></p>
             
@@ -185,10 +134,10 @@
             
                     <h2>6. Contact Us</h2>
                     <p>If you have any questions about this Privacy Policy, please contact us at:<br>
-                    <span class="placeholder">[eve174428@gmail.com]</span></p>
-                </section>
+
+        <p>Email: <span class="edit-me">eve174428@gmail.com</span></p>
+
         <div class="divider"></div>
-        <section id="chinese">
             <h1>隱私權政策 (Privacy Policy)</h1>
             <span class="date">最後更新日期：2026年1月1日</span>
     
@@ -216,34 +165,46 @@
             <h2>6. 聯絡我們</h2>
             <p>如果您對本隱私權政策有任何疑問，請聯繫我們：<br>
             <span class="placeholder">[eve174428@gmail.com]</span></p>
-        </section>
     </div>
 
-    <!-- <div id="anotherapp" class="policy-content">
-        <h1>Privacy Policy: <span class="edit-me">Another App</span></h1>
-        <span class="date">Last Updated: January 2026</span>
-        
-        <p>This policy applies to "Another App". We respect your privacy.</p>
-        
-        <h2>Third Party Services</h2>
-        <p>This app may use simple analytics to improve performance, but no personal identifiable information is collected.</p>
-
-        <h2>Contact</h2>
-        <p>Email: <span class="edit-me">your-email@example.com</span></p>
+    <div id="stockrunner" class="policy-content">
+            <h1>隱私權政策 (Privacy Policy)</h1>
+            <span class="date">最後更新日期：2026年1月1日</span>
+    
+            <p>本隱私權政策說明 <span class="placeholder">[StockRunner]</span>（以下簡稱「我們」）如何處理您的資訊。我們非常重視您的隱私，<strong>我們不會收集、儲存或分享您的任何個人資料。</strong></p>
+    
+            <h2>1. 資料收集與儲存</h2>
+            <ul>
+                <li><strong>本機儲存：</strong> 您在 App 內建立的所有資料皆僅儲存於您的裝置內部（使用 Apple 的 UserDefaults 系統）。</li>
+                <li><strong>無雲端傳輸：</strong> 我們不會將您的資料上傳至任何外部伺服器或雲端資料庫。</li>
+                <li><strong>無追蹤分析：</strong> 我們不使用任何第三方分析工具（如 Google Analytics 或 Firebase）來追蹤您的使用行為。</li>
+            </ul>
+    
+            <h2>2. 外部連結</h2>
+            <p>本 App 使用第三方 API 服務。第三方服務之內容、可用性及品質，可能隨其政策或技術調整而變更或終止。
+            本 App 將盡合理努力維持功能正常運作，但不保證所有第三方服務永久可用。我們對這服務的隱私權規範不負任何責任。</p>
+            <p>The collection and processing of data by this service is governed by their respective privacy policies.</p>
+    
+            <h2>3. 兒童隱私</h2>
+            <p>我們不會收集 13 歲以下兒童的任何資料。由於本 App 完全不收集數據，因此適合所有年齡層使用。</p>
+    
+            <h2>4. 聯絡我們</h2>
+            <p>如果您對本隱私權政策有任何疑問，請聯繫我們：<br>
+        <p>Email: <span class="edit-me">eve174428@gmail.com</span></p>
     </div>
 
-    <div id="gameapp" class="policy-content">
+    <!-- <div id="gameapp" class="policy-content">
         <h1>Privacy Policy: <span class="edit-me">My Game</span></h1>
         <span class="date">Last Updated: January 2026</span>
         
         <p>This game saves your high scores locally via Game Center.</p>
         
         <h2>Contact</h2>
-        <p>Email: <span class="edit-me">your-email@example.com</span></p>
+        <p>Email: <span class="edit-me">eve174428@gmail.com</span></p>
     </div> -->
 
     <div class="footer">
-        &copy; 2026 <span class="edit-me">Eve Tung</span>. All Rights Reserved.
+        &copy; 2026 <span class="edit-me">JungHsiangTung</span>. All Rights Reserved.
     </div>
 
 </div>
