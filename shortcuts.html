@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Center - 支援中心</title>
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --bg-color: #f4f4f7;
+            --card-bg: #ffffff;
+            --text-main: #1d1d1f;
+            --text-sub: #666;
+        }
+
+        body {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--bg-color);
+        }
+
+        /* Navigation Styles */
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding: 5px;
+            background: #e5e5ea;
+            border-radius: 12px;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background: transparent;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-sub);
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn.active {
+            background: white;
+            color: var(--primary-color);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Content Visibility */
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 15px;
+            font-size: 28px;
+        }
+
+        h2 {
+            color: var(--text-main);
+            margin-top: 35px;
+            font-size: 22px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .contact-box {
+            background: #f0f7ff;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border: 1px solid #d0e7ff;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f9f9f9;
+        }
+
+        .lang-en {
+            color: var(--text-sub);
+            font-style: italic;
+            font-size: 0.95em;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 0.85em;
+            color: #999;
+            text-align: center;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        code {
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="nav-tabs">
+        <button class="tab-btn" onclick="window.location.href='index.html'">BtPlayer</button>
+        <button class="tab-btn active" onclick="window.location.href='shortcuts.html'">Shortcuts</button>
+    </nav>
+
+    <div class="container">
+        <!-- Placeholder for Another App Support -->
+        <section id="shortcuts" class="content-section active">
+            <h1>Shortcuts Support 支援中心</h1>
+            <p>歡迎來到 Shortcuts。我們致力於提供建立網頁捷徑體驗。<br>
+                <span class="lang-en">Welcome to Shortcuts. We are committed to help you organize your fav web </span>
+            </p>
+
+            <div class="contact-box">
+                <strong>聯絡我們 / Contact Us</strong><br>
+                如果您有任何疑問，請透過 Email 聯繫開發者：<br>
+                <span class="lang-en">If you have any questions, please contact the developer via email:</span>
+                <div style="margin-top: 10px; font-weight: bold;">
+                    Email: <a href="mailto:eve174428@gmail.com">eve174428@gmail.com</a>
+                </div>
+            </div>
+            <h2>隱私權政策 / Privacy Policy</h2>
+            <h3>1. 資料收集與儲存 / Data Collection and Storage</h3>
+            <ul>
+                <li><strong>本機儲存：</strong> 您在 App 內建立的所有資料（包含捷徑、資料夾、名稱、網址及主題設定）皆僅儲存於您的手機裝置內部（使用 Apple 的 UserDefaults
+                    系統）。</li>
+                <span class="lang-en">Local Storage:All data created within the app (including shortcuts, folders,
+                    names, URLs, and theme settings) is stored locally on your device using Apple's standard storage
+                    systems (UserDefaults).</span>
+                <li><strong>無雲端傳輸：</strong> 我們不會將您的資料上傳至任何外部伺服器或雲端資料庫。</li>
+                <span class="lang-en">No Cloud Sync:We do not transmit your data to any external servers, cloud
+                    databases, or third-party services.</span>
+                <li><strong>無追蹤分析：</strong> 我們不使用任何第三方分析工具（如 Google Analytics 或 Firebase）來追蹤您的使用行為。</li>
+                <span class="lang-en">No Analytics: We do not use third-party analytics tools (such as Google Analytics
+                    or Firebase) to track your usage.</span>
+            </ul>
+
+            <h3>2. 外部連結 / External Links</h3>
+            <p>本 App 允許您建立連往外部網站的捷徑。當您點擊捷徑或驗證網址時，您將直接連線至該第三方網站。我們對這些外部網站的隱私權規範不負任何責任。</p>
+            <span class="lang-en">Our app allows you to create shortcuts to external websites. If you click on a
+                shortcut or verify a URL
+                within the app, you are connecting directly to that third-party website. We are not responsible for the
+                privacy practices or content of those external sites.</span>
+            <h3>3. 網址驗證 / URL Validation</h3>
+            <p>當您新增捷徑時，App 可能會向您提供的網址發送簡易的網路請求（HEAD request），此動作僅是為了確認該網址是否有效。此過程僅發生在您的裝置與目標網站之間，我們不會接收到任何資訊。</p>
+            <span class="lang-en"></span>When you add a new shortcut, the app may send a brief network request ("HEAD
+            request") to the URL you
+            provided. This is solely to verify that the website exists and is reachable. This process happens
+            directly between your device and the target website; no data is sent to us.</span>
+            <h3>4. 兒童隱私 / Kids’ Privacy</h3>
+            <p>我們不會收集 13 歲以下兒童的任何資料。由於本 App 完全不收集數據，因此適合所有年齡層使用。</p>
+            <span class="lang-en">Our app does not knowingly collect data from children under the age of 13. Since we do
+                not collect any
+                data at all, this app is safe for use by all ages.</span>
+
+            <h3>5. 政策變更 / Changes to This Policy</h3>
+            <p>我們可能會不時更新本隱私權政策，任何變更將公佈於此頁面。</p>
+            <span class="lang-en"></span>We may update our Privacy Policy from time to time. Any changes will be posted
+            on this page.</span>
+
+        </section>
+
+        <div class="footer">
+            &copy; 2026 Support Portal. Built for user protection.
+        </div>
+    </div>
+
+</body>
+
+</html>
