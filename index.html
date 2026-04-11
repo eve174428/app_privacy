@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,14 +14,14 @@
             --text-sub: #666;
         }
 
-        body { 
-            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-            line-height: 1.6; 
-            color: #333; 
-            max-width: 800px; 
-            margin: 0 auto; 
-            padding: 20px; 
-            background-color: var(--bg-color); 
+        body {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--bg-color);
         }
 
         /* Navigation Styles */
@@ -48,14 +49,14 @@
         .tab-btn.active {
             background: white;
             color: var(--primary-color);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .container { 
-            background: var(--card-bg); 
-            padding: 40px; 
-            border-radius: 16px; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
+        .container {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
         }
 
         /* Content Visibility */
@@ -69,24 +70,148 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(5px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        h1 { color: var(--primary-color); border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; font-size: 28px; }
-        h2 { color: var(--text-main); margin-top: 35px; font-size: 22px; border-left: 4px solid var(--primary-color); padding-left: 15px; }
-        
-        .contact-box { background: #f0f7ff; padding: 25px; border-radius: 12px; margin: 25px 0; border: 1px solid #d0e7ff; }
-        .faq-item { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #f9f9f9; }
-        .lang-en { color: var(--text-sub); font-style: italic; font-size: 0.95em; display: block; margin-top: 5px; }
-        .footer { margin-top: 50px; font-size: 0.85em; color: #999; text-align: center; }
-        
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 15px;
+            font-size: 28px;
+        }
 
-        code { background: #eee; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+        h2 {
+            color: var(--text-main);
+            margin-top: 35px;
+            font-size: 22px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .contact-box {
+            background: #f0f7ff;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border: 1px solid #d0e7ff;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f9f9f9;
+        }
+
+        .lang-en {
+            color: var(--text-sub);
+            font-style: italic;
+            font-size: 0.95em;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 0.85em;
+            color: #999;
+            text-align: center;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        code {
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        /* 指南區塊樣式 */
+        .guide-step {
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background: #007AFF;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .step-content b {
+            display: block;
+            font-size: 1.1em;
+            color: #000;
+        }
+
+        .contact-box {
+            background: #f0f7ff;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border: 1px solid #d0e7ff;
+            text-align: center;
+        }
+
+        .lang-en {
+            color: #666;
+            font-style: italic;
+            font-size: 0.9em;
+            display: block;
+            margin-top: 4px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 0.85em;
+            color: #999;
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        code {
+            background: #e0e0e0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        .highlight {
+            color: #d70000;
+            font-weight: bold;
+        }
     </style>
 </head>
+
 <body>
 
     <nav class="nav-tabs">
@@ -98,9 +223,44 @@
         <!-- BtPlayer Support Section -->
         <section id="btplayer" class="content-section active">
             <h1>BtPlayer Support 支援中心</h1>
-            
+
             <p>歡迎來到 BtPlayer。我們致力於提供最安全的藍牙聽覺體驗。<br>
-            <span class="lang-en">Welcome to BtPlayer. We are committed to providing the safest Bluetooth audio experience.</span></p>
+                <span class="lang-en">Welcome to BtPlayer. We are committed to providing the safest Bluetooth audio
+                    experience.</span>
+            </p>
+
+            <h2>快速使用指南 / Quick Start Guide</h2>
+
+
+            <div class="guide-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <b>準備音訊來源 / Prepare Audio Source</b>
+                    將 MP3 檔案放入 iPhone 的「檔案」App 中。
+                    <span class="lang-en">Place MP3 files in the iOS "Files" app.</span>
+                </div>
+            </div>
+
+            <div class="guide-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <b>安全播放控制 / Secure Playback</b>
+                    <span class="highlight">重要：</span>App 預設為「藍牙」模式。請連線藍牙耳機，或手動切換至 <code>Speaker</code> 模式方可播放。
+                    <span class="lang-en"><span class="highlight">Important:</span> The app defaults to "Bluetooth" mode.
+                        Connect Bluetooth headphones or manually switch to <code>Speaker</code> mode to play.</span>
+                </div>
+            </div>
+
+            <div class="guide-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <b>新增至播放清單 / Add to Playlist</b>
+                    開啟 BtPlayer，點擊右下角的 <code>+</code> 按鈕並選擇來源。
+                    <span class="lang-en">Open BtPlayer, tap the <code>+</code> button and choose your source.</span>
+                </div>
+            </div>
+
+
 
             <div class="contact-box">
                 <strong>聯絡我們 / Contact Us</strong><br>
@@ -112,27 +272,35 @@
             </div>
 
             <h2>常見問題 / FAQ</h2>
-            
+
             <div class="faq-item">
                 <strong>Q: 為什麼點擊播放卻沒有聲音？</strong><br>
                 <strong><span class="lang-en">Q: Why is there no sound when I tap play?</span></strong>
-                <p>A: App 預設開啟「藍牙守衛」模式。請確保已連線藍牙耳機，或在畫面上方切換至 <code>Speaker</code> 模式。<br>
-                <span class="lang-en">A: The app defaults to "Bluetooth Guard" mode. Ensure Bluetooth headphones are connected, or switch to <code>Speaker</code> mode at the top of the screen.</span></p>
+                <p>A: App 預設開啟「藍牙」模式。請確保已連線藍牙耳機，或在畫面上方切換至 <code>Speaker</code> 模式。<br>
+                    <span class="lang-en">A: The app defaults to "Bluetooth" mode. Ensure Bluetooth headphones are
+                        connected, or switch to <code>Speaker</code> mode at the top of the screen.</span>
+                </p>
             </div>
 
             <div class="faq-item">
                 <strong>Q: 如何配對硬體設備？</strong><br>
                 <strong><span class="lang-en">Q: How to pair with hardware?</span></strong>
                 <p>A: 本 App 支援所有標準藍牙耳機。請在 iOS 系統設定中完成藍牙配對，App 會自動偵測狀態。<br>
-                <span class="lang-en">A: This app supports all standard Bluetooth headphones. Complete pairing in iOS Settings; the app will detect the status automatically.</span></p>
+                    <span class="lang-en">A: This app supports all standard Bluetooth headphones. Complete pairing in
+                        iOS Settings; the app will detect the status automatically.</span>
+                </p>
             </div>
 
             <h2>隱私權政策 / Privacy Policy</h2>
             <ul>
                 <li><strong>資料收集：</strong> 本 App 不收集、不儲存任何個人資料。<br>
-                <span class="lang-en"><strong>Data Collection:</strong> This app does not collect or store any personal data.</span></li>
+                    <span class="lang-en"><strong>Data Collection:</strong> This app does not collect or store any
+                        personal data.</span>
+                </li>
                 <li><strong>檔案存取：</strong> 音樂檔案僅儲存在您的裝置本地端。<br>
-                <span class="lang-en"><strong>File Access:</strong> Music files are stored only locally on your device.</span></li>
+                    <span class="lang-en"><strong>File Access:</strong> Music files are stored only locally on your
+                        device.</span>
+                </li>
             </ul>
         </section>
 
@@ -142,4 +310,5 @@
     </div>
 
 </body>
+
 </html>
